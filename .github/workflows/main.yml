@@ -1,0 +1,31 @@
+name: Diabetes Prediction Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-train:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Download kode lo ke server GitHub
+    - uses: actions/checkout@v3
+
+    # 2. Install Miniconda (Biar bisa baca conda.yml)
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        activate-environment: mlflow-env  # Nama env harus sama kayak di conda.yml
+        environment-file: conda.yml       # File resep lo
+        python-version: 3.9
+        auto-activate-base: false
+
+    # 3. Running MLflow Training
+    # Kita pake flag --env-manager=local karena env-nya udah dibuat di step 2
+    - name: Train Model
+      shell: bash -l {0}  # Wajib ada biar conda activate jalan
+      run: |
+        mlflow run . -P max_iter=1000 --env-manager=local --experiment-name Diabetes_GitHub_Actions

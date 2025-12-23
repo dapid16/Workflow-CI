@@ -1,0 +1,14 @@
+artifact_uri: file:D:\asah\diabetes_workflow\mlruns/966232227544248462/ddb1ed678fe7414d89560992495b72fe/artifacts
+end_time: 1766473334771
+entry_point_name: ''
+experiment_id: '966232227544248462'
+lifecycle_stage: active
+run_id: ddb1ed678fe7414d89560992495b72fe
+run_name: delightful-finch-382
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766473321462
+status: 3
+tags: []
+user_id: Asus

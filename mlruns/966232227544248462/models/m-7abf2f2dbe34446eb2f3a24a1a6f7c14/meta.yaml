@@ -1,0 +1,10 @@
+artifact_location: file:D:\asah\diabetes_workflow\mlruns/966232227544248462/models/m-7abf2f2dbe34446eb2f3a24a1a6f7c14/artifacts
+creation_timestamp: 1766473331585
+experiment_id: '966232227544248462'
+last_updated_timestamp: 1766473334316
+model_id: m-7abf2f2dbe34446eb2f3a24a1a6f7c14
+model_type: null
+name: model
+source_run_id: ddb1ed678fe7414d89560992495b72fe
+status: 2
+status_message: null

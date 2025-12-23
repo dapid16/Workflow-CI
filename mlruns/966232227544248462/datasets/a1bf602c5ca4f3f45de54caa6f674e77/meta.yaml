@@ -1,0 +1,12 @@
+digest: 81e59388
+name: dataset
+profile: '{"num_rows": 19226, "num_elements": 153808}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "gender", "required": true},
+  {"type": "double", "name": "age", "required": true}, {"type": "double", "name":
+  "hypertension", "required": true}, {"type": "double", "name": "heart_disease", "required":
+  true}, {"type": "long", "name": "smoking_history", "required": true}, {"type": "double",
+  "name": "bmi", "required": true}, {"type": "double", "name": "HbA1c_level", "required":
+  true}, {"type": "double", "name": "blood_glucose_level", "required": true}]}'
+source: '{"tags": {"mlflow.user": "Asus", "mlflow.source.name": "modelling.py", "mlflow.source.type":
+  "LOCAL"}}'
+source_type: code

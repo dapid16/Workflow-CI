@@ -1,0 +1,33 @@
+artifact_path: file:D:\asah\diabetes_workflow\mlruns/966232227544248462/models/m-cdf6ab7cd60a4b2b80c4801b831854dc/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.19
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.8.0
+model_id: m-cdf6ab7cd60a4b2b80c4801b831854dc
+model_size_bytes: 974
+model_uuid: m-cdf6ab7cd60a4b2b80c4801b831854dc
+prompts: null
+run_id: ddb1ed678fe7414d89560992495b72fe
+signature:
+  inputs: '[{"type": "long", "name": "gender", "required": true}, {"type": "double",
+    "name": "age", "required": true}, {"type": "double", "name": "hypertension", "required":
+    true}, {"type": "double", "name": "heart_disease", "required": true}, {"type":
+    "long", "name": "smoking_history", "required": true}, {"type": "double", "name":
+    "bmi", "required": true}, {"type": "double", "name": "HbA1c_level", "required":
+    true}, {"type": "double", "name": "blood_glucose_level", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-23 07:02:05.136702'
