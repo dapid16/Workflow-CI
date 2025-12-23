@@ -13,26 +13,22 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Mamba/Conda
-      uses: conda-incubator/setup-miniconda@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
       with:
-        activate-environment: mlflow-env
-        environment-file: conda.yml  
-        auto-activate-base: false
-        use-mamba: true       
+        python-version: '3.9'
+        cache: 'pip' 
 
-    - name: Debug Environment
-      shell: bash -l {0}
+    - name: Install Dependencies
       run: |
-        conda info
-        conda list
+        python -m pip install --upgrade pip
+        pip install mlflow scikit-learn pandas matplotlib
+
+    - name: Check Files
+      run: |
+        ls -R
         python --version
 
     - name: Train Model
-      shell: bash -l {0}
       run: |
-        # Pastikan kita paksa install dependencies pip kalau conda gagal resolve
-        pip install mlflow scikit-learn pandas matplotlib
-        
-        # Run MLflow
         mlflow run . -P max_iter=1000 --env-manager=local --experiment-name Diabetes_GitHub_Actions
