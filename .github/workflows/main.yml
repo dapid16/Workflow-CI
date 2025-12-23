@@ -17,8 +17,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v2
       with:
         activate-environment: mlflow-env
-        environment-file: conda.yml
-        python-version: 3.10   
+        environment-file: conda.yml  
         auto-activate-base: false
         use-mamba: true       
 
